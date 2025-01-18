@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap');
 
 body{
-	background-color: white;
-	color: black;
 	font-family: "Comic Soon";
 }
 img{
@@ -10,7 +8,4 @@ img{
 }
 img:hover{
 	filter: blur(0px);
-}
-a{
-	color: black;
 }
