@@ -9,3 +9,6 @@ img{
 img:hover{
 	filter: blur(0px);
 }
+a{
+	color: black;
+}
