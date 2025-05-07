@@ -1,0 +1,554 @@
+/* Bliss 3.0, Created by progwi0. */
+
+/* Font */
+
+@font-face{
+	font-family: Adwaita Sans;
+	src: url("./fonts/adwaitasans.ttf");
+}
+
+/* Button Animations */
+
+/* Dark */
+
+@keyframes darkHoverFrom{
+	from{
+		background-color: rgba(56, 56, 60, 1);
+		color: rgba(255, 255, 255, 1);
+	}
+	to{
+		background-color: rgba(66, 66, 73, 1);
+		color: rgba(255, 255, 255, 1);
+	}
+}
+
+@keyframes darkHoverTo{
+	from{
+		background-color: rgba(66, 66, 73, 1);
+		color: rgba(255, 255, 255, 1);
+	}
+	to{
+		background-color: rgba(56, 56, 60, 1);
+		color: rgba(255, 255, 255, 1);
+	}
+}
+
+/* Dark (flat) */
+
+@keyframes darkFlatHoverFrom{
+	from{
+		background-color: rgba(255, 255, 255, 0.0);
+		color: rgba(255, 255, 255, 1);
+	}
+	to{
+		background-color: rgba(255, 255, 255, 0.15);
+		color: rgba(255, 255, 255, 1);
+	}
+}
+
+@keyframes darkFlatHoverTo{
+	from{
+		background-color: rgba(255, 255, 255, 0.15);
+		color: rgba(255, 255, 255, 1);
+	}
+	to{
+		background-color: rgba(255, 255, 255, 0.0);
+		color: rgba(255, 255, 255, 1);
+	}
+}
+
+/* Light */
+
+@keyframes lightHoverFrom{
+	from{
+		background-color: rgba(100, 100, 100, 0.1);
+		color: rgba(0, 0, 0, 1);
+	}
+	to{
+		background-color: rgba(120, 120, 120, 0.15);
+		color: rgba(0, 0, 0, 1);
+	}
+}
+
+@keyframes lightHoverTo{
+	from{
+		background-color: rgba(120, 120, 120, 0.15);
+		color: rgba(0, 0, 0, 1);
+	}
+	to{
+		background-color: rgba(100, 100, 100, 0.1);
+		color: rgba(0, 0, 0, 1);
+	}
+}
+
+/* Light (flat) */
+
+@keyframes lightFlatHoverFrom{
+	from{
+		background-color: rgba(100, 100, 100, 0.0);
+		color: rgba(0, 0, 0, 1);
+	}
+	to{
+		background-color: rgba(120, 120, 120, 0.15);
+		color: rgba(0, 0, 0, 1);
+	}
+}
+
+@keyframes lightFlatHoverTo{
+	from{
+		background-color: rgba(120, 120, 120, 0.15);
+		color: rgba(0, 0, 0, 1);
+	}
+	to{
+		background-color: rgba(100, 100, 100, 0.0);
+		color: rgba(0, 0, 0, 1);
+	}
+}
+
+/* Suggest */
+
+@keyframes suggestHoverFrom{
+	from{
+		background-color: rgba(0, 153, 255, 1);
+		color: rgba(255, 255, 255, 1);
+	}
+	to{
+		background-color: rgba(52, 174, 255, 1);
+		color: rgba(255, 255, 255, 1);
+	}
+}
+
+@keyframes suggestHoverTo{
+	from{
+		background-color: rgba(52, 174, 255, 1);
+		color: rgba(255, 255, 255, 1);
+	}
+	to{
+		background-color: rgba(0, 153, 255, 1);
+		color: rgba(255, 255, 255, 1);
+	}
+}
+
+/* Destructive */
+
+@keyframes destructiveHoverFrom{
+	from{
+		background-color: rgba(255, 135, 135, 0.2);
+		color: rgba(255, 135, 135, 1);
+	}
+	to{
+		background-color: rgba(255, 150, 150, 0.2);
+		color: rgba(255, 135, 135, 1);
+	}
+}
+
+@keyframes destructiveHoverTo{
+	from{
+		background-color: rgba(255, 150, 150, 0.2);
+		color: rgba(255, 135, 135, 1);
+	}
+	to{
+		background-color: rgba(255, 135, 135, 0.2);
+		color: rgba(255, 135, 135, 1);
+	}
+}
+
+/* Other Animations */
+
+@keyframes fadeIn{
+	from{
+		display: none;
+	}
+	to{
+		display: block;
+	}
+}
+
+@keyframes fadeOut{
+	from{
+		display: block;
+	}
+	to{
+		display: none;
+	}
+}
+
+/* Theming */
+
+html{
+	overflow: hidden;
+}
+
+/* Body */
+
+body{
+	width: 100%;
+	height: 100%;
+	font-family: Adwaita Sans;
+	display: flex;
+  	align-items: center;
+ 	justify-content: center;
+ 	flex-direction: column;
+ 	margin: 0;
+}
+
+/* Body (dark) */
+
+body[theme="dark"]{
+	background-color: rgba(34, 34, 38, 1);
+	color: white;
+}
+
+/* Body (light) */
+
+body[theme="light"]{
+	background-color: rgba(255, 255, 255, 1);
+	color: black;
+}
+
+/* Buttons */
+
+button{
+	width: 100%;
+	height: 100%;
+	border-radius: 20px;
+	font-family: Adwaita Sans;
+}
+
+/* Dark */
+
+button[theme="dark"]{
+	background-color: rgba(56, 56, 60, 1);
+	color: rgba(255, 255, 255, 1);
+	border: none;
+	animation-name: darkHoverTo;
+	animation-duration: 0.3s;
+	font-size: 100%;
+	font-weight: bold;
+}
+
+button[theme="dark"]:hover{
+	background-color: rgba(66, 66, 73, 1);
+	color: rgba(255, 255, 255, 1);
+	border: none;
+	animation-name: darkHoverFrom;
+	animation-duration: 0.3s;
+	font-size: 100%;
+	font-weight: bold;
+}
+
+button[theme="dark"]:active{
+	background-color: rgba(73, 73, 83, 1);
+	color: rgba(255, 255, 255, 1);
+	border: none;
+	font-size: 100%;
+	font-weight: bold;
+}
+
+button[theme="dark"]:disabled{
+	background-color: rgba(60, 60, 62, 0.5);
+	color: rgba(255, 255, 255, 0.3);
+	border: none;
+	font-size: 100%;
+	font-weight: bold;
+}
+
+/* Light */
+
+button[theme="light"]{
+	background-color: rgba(100, 100, 100, 0.1);
+	color: rgba(0, 0, 0, 1);
+	border: none;
+	animation-name: lightHoverTo;
+	animation-duration: 0.3s;
+	font-size: 100%;
+	font-weight: bold;
+}
+
+button[theme="light"]:hover{
+	background-color: rgba(120, 120, 120, 0.15);
+	color: rgba(0, 0, 0, 1);
+	border: none;
+	animation-name: lightHoverFrom;
+	animation-duration: 0.3s;
+	font-size: 100%;
+	font-weight: bold;
+}
+
+button[theme="light"]:active{
+	background-color: rgba(140, 140, 140, 0.2);
+	color: rgba(0, 0, 0, 1);
+	border: none;
+	font-size: 100%;
+	font-weight: bold;
+}
+
+button[theme="light"]:disabled{
+	background-color: rgba(100, 100, 100, 0.06);
+	color: rgba(0, 0, 0, 0.3);
+	border: none;
+	font-size: 100%;
+	font-weight: bold;
+}
+
+/* Suggested */
+
+.suggested{
+	background-color: rgba(0, 153, 255, 1);
+	color: rgba(255, 255, 255, 1);
+	border: none;
+	border-radius: 15px;
+	animation-name: suggestHoverTo;
+	animation-duration: 0.3s;
+	font-size: 100%;
+	font-weight: bold;
+}
+
+.suggested:hover{
+	background-color: rgba(52, 174, 255, 1);
+	animation-name: suggestHoverFrom;
+	animation-duration: 0.3s;
+}
+
+.suggested:active{
+	background-color: rgba(87, 187, 255, 1);
+}
+
+/* Destructive */
+
+.destructive{
+	background-color: rgba(255, 135, 135, 0.2);
+	color: rgba(255, 135, 135, 1);
+	border: none;
+	border-radius: 15px;
+	animation-name: destructiveHoverTo;
+	animation-duration: 0.3s;
+	font-size: 100%;
+	font-weight: bold;
+}
+
+.destructive:hover{
+	background-color: rgba(255, 150, 150, 0.2);
+	animation-name: destructiveHoverFrom;
+	animation-duration: 0.3s;
+}
+
+.destructive:active{
+	background-color: rgba(255, 180, 180, 0.2);
+}
+
+/* Flat (dark) */
+
+.flat[theme="dark"]{
+	background-color: rgba(255, 255, 255, 0.0);
+	color: rgba(255, 255, 255, 1);
+	border: none;
+	border-radius: 15px;
+	animation-name: darkFlatHoverTo;
+	animation-duration: 0.3s;
+	font-size: 100%;
+	font-weight: bold;
+}
+
+.flat[theme="dark"]:hover{
+	background-color: rgba(255, 255, 255, 0.15);
+	color: rgba(255, 255, 255, 1);
+	border: none;
+	border-radius: 15px;
+	animation-name: darkFlatHoverFrom;
+	animation-duration: 0.3s;
+	font-size: 100%;
+	font-weight: bold;
+}
+
+.flat[theme="dark"]:active{
+	background-color: rgba(255, 255, 255, 0.2);
+	color: rgba(255, 255, 255, 1);
+	border: none;
+	border-radius: 15px;
+	font-size: 100%;
+	font-weight: bold;
+}
+
+/* Flat (dark, lite) */
+
+.flat[theme="litedark"]{
+	background-color: rgba(255, 255, 255, 0.0);
+	color: rgba(255, 255, 255, 1);
+	border: none;
+	border-radius: 15px;
+	font-size: 100%;
+	font-weight: bold;
+}
+
+.flat[theme="litedark"]:hover{
+	background-color: rgba(255, 255, 255, 0.15);
+	color: rgba(255, 255, 255, 1);
+	border: none;
+	border-radius: 15px;
+	font-size: 100%;
+	font-weight: bold;
+}
+
+.flat[theme="litedark"]:active{
+	background-color: rgba(255, 255, 255, 0.2);
+	color: rgba(255, 255, 255, 1);
+	border: none;
+	border-radius: 15px;
+	font-size: 100%;
+	font-weight: bold;
+}
+
+/* Light */
+
+.flat[theme="light"]{
+	background-color: rgba(100, 100, 100, 0.0);
+	color: rgba(0, 0, 0, 1);
+	border: none;
+	border-radius: 15px;
+	animation-name: darkFlatHoverTo;
+	animation-duration: 0.3s;
+	font-size: 100%;
+	font-weight: bold;
+}
+
+.flat[theme="light"]:hover{
+	background-color: rgba(120, 120, 120, 0.15);
+	color: rgba(0, 0, 0, 1);
+	border: none;
+	border-radius: 15px;
+	animation-name: lightFlatHoverFrom;
+	animation-duration: 0.3s;
+	font-size: 100%;
+	font-weight: bold;
+}
+
+.flat[theme="light"]:active{
+	background-color: rgba(140, 140, 140, 0.2);
+	color: rgba(0, 0, 0, 1);
+	border: none;
+	border-radius: 15px;
+	font-size: 100%;
+	font-weight: bold;
+}
+
+/* Flat (light, lite) */
+
+.flat[theme="litelight"]{
+	background-color: rgba(100, 100, 100, 0.0);
+	color: rgba(0, 0, 0, 1);
+	border: none;
+	border-radius: 15px;
+	font-size: 100%;
+	font-weight: bold;
+}
+
+.flat[theme="litelight"]:hover{
+	background-color: rgba(120, 120, 120, 0.15);
+	color: rgba(0, 0, 0, 1);
+	border: none;
+	border-radius: 15px;
+	font-size: 100%;
+	font-weight: bold;
+}
+
+.flat[theme="litelight"]:active{
+	background-color: rgba(140, 140, 140, 0.2);
+	color: rgba(0, 0, 0, 1);
+	border: none;
+	border-radius: 15px;
+	font-size: 100%;
+	font-weight: bold;
+}
+
+/* Inputs */
+
+input{
+	font-family: Adwaita Sans;
+}
+
+/* Dark */
+
+input[theme="dark"]{
+	background-color: rgba(100, 100, 100, 0.1);
+	color: rgba(255, 255, 255, 1);
+	border: none;
+	border-radius: 7px;
+	height: 100%;
+}
+
+input[theme="dark"]:disabled{
+	background-color: rgba(100, 100, 100, 0.1);
+	color: rgba(255, 255, 255, 0.3);
+	border: none;
+	border-radius: 7px;
+	height: 100%;
+}
+
+/* Light */
+
+input[theme="light"]{
+	background-color: rgba(100, 100, 100, 0.1);
+	color: rgba(0, 0, 0, 1);
+	border: none;
+	border-radius: 7px;
+	height: 100%;
+}
+
+input[theme="light"]:disabled{
+	background-color: rgba(100, 100, 100, 0.1);
+	color: rgba(0, 0, 0, 0.3);
+	border: none;
+	border-radius: 7px;
+	height: 100%;
+}
+
+/* Shapes */
+
+.pill{
+	border-radius: 100px;
+}
+
+.sharp{
+	border-radius: 0px;
+}
+
+.fedora{
+	border-bottom-left-radius: 30px;
+	border-bottom-right-radius: 100px;
+	border-top-left-radius: 100px;
+	border-top-right-radius: 100px;
+}
+
+/* Other */
+
+.menu{
+	justify-content: space-evenly;
+	display: flex;
+	gap: 5px;
+	height: 4%;
+	width: 10%;
+}
+
+.box{
+	width: 100%;
+	height: 100%;
+}
+
+.space{
+	height: 3px;
+}
+
+iframe{
+	border-radius: 10px;
+}
+
+object{
+	border-radius: 10px;
+}
+
+webview{
+	border-radius: 10px;
+	width: 100%;
+	height: 100%;
+}
