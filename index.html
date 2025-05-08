@@ -14,6 +14,10 @@
       background-color: rgb(43, 42, 56);
       color: white;
       margin: 0;
+      body {
+      display: flex;
+      justify-content: center; /* Центрирует элементы по горизонтали */
+      margin: 0; /* Убирает отступы по умолчанию */
     }
     .sigma{
       background: linear-gradient(to bottom, rgb(88, 154, 255), rgb(191, 0, 255));
@@ -29,7 +33,7 @@
     .menu{
 	    justify-content: space-evenly;
 	    display: flex;
-	    gap: 100%;
+	    gap: 50%;
 	    height: 4%;
 	    width: 10%;
     }
@@ -37,18 +41,15 @@
   <body>
     <header style="width: 100%;">
       <br>
-      <div>
-        <center><button class="flat" theme="dark" onclick="location.href = 'https://progwi0.github.io/'" style="width: 100px; height: 50px;">progwi0</button></center>
-        <br>
-        <div class="menu" style="width: 5%; padding-left: 23.7%;">
-          <button class="flat" theme="dark" onclick="location.href = 'https://progwi0.github.io/progwilinux/'">ProgwiLinux</button>
-          <button class="flat" theme="dark" onclick = "location.href = 'https://github.com/progwi0/kreka'">Kreka</button>
-          <button class="flat" theme="dark" onclick = "location.href = 'https://github.com/progwi0/fifi'">Fifi</button>
-          <button class="flat" theme="dark" onclick = "location.href = 'https://github.com/progwi0/lapiz'">Lapiz</button>
-          <button class="flat" theme="dark" onclick = "location.href = 'https://github.com/progwi0/abacus'">Abacus</button>
-          <button class="flat" theme="dark" onclick="location.href = 'https://progwi0.github.io/games/'">Games</button>
-          <button class="flat" theme="dark" onclick="location.href = 'https://progwi0.github.io/cartoons/'">Cartoons</button>
-        </div>
+      <div class="menu" style="width: 5%; padding-left: 2%;">
+        <button class="flat" theme="dark" onclick="location.href = 'https://progwi0.github.io/'">progwi0</button>
+        <button class="flat" theme="dark" onclick="location.href = 'https://progwi0.github.io/progwilinux/'" style="font-size: 85%;">ProgwiLinux</button>
+        <button class="flat" theme="dark" onclick = "location.href = 'https://github.com/progwi0/kreka'" style="font-size: 85%;">Kreka</button>
+        <button class="flat" theme="dark" onclick = "location.href = 'https://github.com/progwi0/fifi'" style="font-size: 85%;">Fifi</button>
+        <button class="flat" theme="dark" onclick = "location.href = 'https://github.com/progwi0/lapiz'" style="font-size: 85%;">Lapiz</button>
+        <button class="flat" theme="dark" onclick = "location.href = 'https://github.com/progwi0/abacus'" style="font-size: 85%;">Abacus</button>
+        <button class="flat" theme="dark" onclick="location.href = 'https://progwi0.github.io/games/'" style="font-size: 85%;">Games</button>
+        <button class="flat" theme="dark" onclick="location.href = 'https://progwi0.github.io/cartoons/'" style="font-size: 85%;">Cartoons</button>
       </div>
       <br>
       <center><h1>Hello!<br>Welcome to my site!</h1></center>
