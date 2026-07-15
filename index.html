@@ -27,4 +27,20 @@
             </footer>
         </center>
     </body>
+    <script>
+        useragentus = navigator.userAgent;
+
+        if(useragentus.includes("Firefox/") || useragentus.includes("Mozilla/")){
+            warnus = prompt("Веб-сайт отображается корректно только на браузерах, основанных на Chromium (и его движке). Так что если вы используете Firefox - перейдите пожалуйста на Chromium.");
+            console.warn("Веб-сайт отображается корректно только на браузерах, основанных на Chromium (и его движке). Так что если вы используете Firefox - перейдите пожалуйста на Chromium.");
+
+            if(warnus == "хорошо"){
+                console.info("Извините за такое, просто как-бы я не старался - оно просто не решается блин.")
+                document.close();
+            } else {
+                console.info("Не хотите по хорошему - будет по плохому.")
+                document.close();
+            }
+        }
+    </script>
 </html>
