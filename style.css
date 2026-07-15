@@ -19,13 +19,13 @@ body{
     background: linear-gradient(180deg, rgb(212, 213, 255), rgb(255, 212, 212));
     /* background: linear-gradient(180deg, rgb(5, 189, 240), rgb(255, 255, 255)); */
     color: white;
+    height: 100%;
+    width: 100%;
     text-shadow: 0px 0px 10px black;
     font-family: Tiny5;
     justify-content: center;
     align-content: center;
     background-size: 2560px 1280px;
-    height: 100%;
-    width: 100%;
 }
 
 header{
@@ -107,6 +107,8 @@ button:active{
         background: linear-gradient(180deg, rgb(0, 1, 37), rgb(46, 0, 0));
         /* background: linear-gradient(180deg, rgb(5, 189, 240), rgb(255, 255, 255)); */
         color: white;
+        height: 100%;
+        width: 100%;
         text-shadow: 0px 0px 10px black;
         font-family: Tiny5;
         justify-content: center;
