@@ -1,35 +1,173 @@
-<html>
-    <head>
-        <title>progwi0</title>
-        <link rel="stylesheet" href="../style.css">
-        <link rel="icon" type="image/x-icon" href="../progwi0.png">
-    </head>
-    <body>
-        <center>
-            <header>
-                <b class="title" onclick="location.href = '../index.html'">progwi0</b>
-            </header>
-        </center>
-        <center>
-            <main>
-                <h1>Проекты.</h1>
-                <span>Сейчас работаю над многими проектами, как для Linux, так и для Windows. Из самых нормальных я выделил следующие проекты:</span>
-                <br />
-                <br />
-                <button class="button" title="Браузер для мобильных устройств." onclick="location.href = 'https://progwi0.github.io/kreka'">Kreka</button>
-                <br />
-                <br />
-                <button class="button" title="Дистрибутив Linux, создан по приколу, но обновляется." onclick="location.href = 'https://progwi0.github.io/progwilinux'">Progwilinux</button>
-                <h6>(Снизу панель с всем нужным.)</h6>
-            </main>
-        </center>
-        <center>
-            <footer>
-                <button class="panelbutton" onclick="location.href = './socnet.html'">Социальные сети</button>
-                <button class="panelbutton" onclick="location.href = './aboutme.html'">Обо мне</button>
-                <button class="panelbutton" onclick="location.href = '../index.html'">Вернуться на главный сайт</button>
-                <button class="panelbutton" onclick="location.href = './projects.html'">Мои проекты</button>
-            </footer>
-        </center>
-    </body>
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/beercss@5.0.1/dist/cdn/beer.min.css" rel="stylesheet" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/beercss@5.0.1/dist/cdn/beer.min.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@1.1.4/dist/cdn/material-dynamic-colors.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="../progwi0.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>progwi0 - Проекты</title>
+  </head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Tiny5&display=swap');
+
+    *{
+      font-family: Tiny5;
+    }
+
+    html{
+      overflow: hidden;
+    }
+
+    body.light{
+      background-image: url("https://raw.githubusercontent.com/progwi0/progwiwalls/refs/heads/main/spotiwall.png");
+      background-size: cover;
+      background-position: center;
+      backdrop-filter: brightness(50%);
+      color: white;
+      --primary:#8b5000;
+      --on-primary:#ffffff;
+      --primary-container:#ffdcbe;
+      --on-primary-container:#2c1600;
+      --secondary:#725a42;
+      --on-secondary:#ffffff;
+      --secondary-container:#ffdcbe;
+      --on-secondary-container:#291806;
+      --tertiary:#58633a;
+      --on-tertiary:#ffffff;
+      --tertiary-container:#dce8b4;
+      --on-tertiary-container:#161e01;
+      --error:#ba1a1a;
+      --on-error:#ffffff;
+      --error-container:#ffdad6;
+      --on-error-container:#410002;
+      --background:#fffbff;
+      --on-background:#201b16;
+      --surface:#fff8f5;
+      --on-surface:#201b16;
+      --surface-variant:#f2dfd1;
+      --on-surface-variant:#51453a;
+      --outline:#837468;
+      --outline-variant:#d5c3b5;
+      --shadow:#000000;
+      --scrim:#000000;
+      --inverse-surface:#352f2b;
+      --inverse-on-surface:#faefe7;
+      --inverse-primary:#ffb870;
+      --surface-dim:#e3d8d1;
+      --surface-bright:#fff8f5;
+      --surface-container-lowest:#ffffff;
+      --surface-container-low:#fdf2ea;
+      --surface-container:#f7ece4;
+      --surface-container-high:#f1e6df;
+      --surface-container-highest:#ebe0d9;
+    }
+
+    body.dark{
+      background-image: url("https://raw.githubusercontent.com/progwi0/progwiwalls/refs/heads/main/gotosleep.png");
+      background-size: cover;
+      background-position: center;
+      backdrop-filter: brightness(25%);
+      --primary:#78dc77;
+      --on-primary:#00390a;
+      --primary-container:#005313;
+      --on-primary-container:#94f990;
+      --secondary:#baccb3;
+      --on-secondary:#253423;
+      --secondary-container:#3b4b38;
+      --on-secondary-container:#d5e8cf;
+      --tertiary:#a0cfd4;
+      --on-tertiary:#00363b;
+      --tertiary-container:#1f4d52;
+      --on-tertiary-container:#bcebf0;
+      --error:#ffb4ab;
+      --on-error:#690005;
+      --error-container:#93000a;
+      --on-error-container:#ffb4ab;
+      --background:#1a1c19;
+      --on-background:#e2e3dd;
+      --surface:#121411;
+      --on-surface:#e2e3dd;
+      --surface-variant:#424940;
+      --on-surface-variant:#c2c9bd;
+      --outline:#8c9388;
+      --outline-variant:#424940;
+      --shadow:#000000;
+      --scrim:#000000;
+      --inverse-surface:#e2e3dd;
+      --inverse-on-surface:#2f312d;
+      --inverse-primary:#006e1c;
+      --surface-dim:#121411;
+      --surface-bright:#383a36;
+      --surface-container-lowest:#0c0f0c;
+      --surface-container-low:#1a1c19;
+      --surface-container:#1e201d;
+      --surface-container-high:#282b27;
+      --surface-container-highest:#333531;
+    }
+  </style>
+  <body>
+    <dialog id="nopa">
+      <h5>Неа.</h5>
+      <div>Зачем тебе тыкать сюда, если есть кнопка?</div>
+      <nav>
+        <button class="transparent max left" onclick="document.querySelector('#nopa').close();">Просто так.</button>
+        <button class="transparent max right" onclick="document.querySelector('#nopa').close(); document.querySelector('#idkt').show();">Не знаю...</button>
+      </nav>
+    </dialog>
+    <dialog id="idkt">
+      <h5>Блина.</h5>
+      <div>Вот и я не знаю...</div>
+      <nav>
+        <button class="transparent max" onclick="document.querySelector('#idkt').close();">Ну ладно...</button>
+      </nav>
+    </dialog>
+
+    <header>
+      <nav>
+        <h6 class="max center-align" onclick="document.querySelector('#nopa').show();">progwi0</h6>
+        <button class="blur center-align max" onclick="location.href = '../index.html'">
+          <i>home</i>
+        </button>
+        <button class="blur center-align max" onclick="location.href = './info.html'">
+          <i>info</i>
+        </button>
+        <button class="blur center-align max" onclick="location.href = './projects.html'">
+          <i>terminal</i>
+        </button>
+        <button class="blur center-align max" onclick="location.href = './socnet.html'">
+          <i>communities</i>
+        </button>
+      </nav>
+    </header>
+    <main class="responsive">
+        <article class="center-align transparent small middle-align">
+          <div>
+            <h1>Проекты...</h1>
+            <h6>Здесь находятся мои главные проекты. (их 2)<br />Посмотрите, может какой-то понравится.</h6>
+          </div>
+        </article>
+        <article class="rounded border center">
+          <img class="small top-round responsive" src="../img/progwilinuxlogotext.png">
+          <div>
+            <h4>Progwilinux</h4>
+            <p>Дистрибутив Linux, который ни на чём не основан. (Хотя использует пакеты из Arch Linux...)</p>
+            <nav>
+              <button class="max" onclick="location.href = 'https://progwi0.pp.ua/progwilinux'">Поглядеть</button>
+            </nav>
+          </div>
+        </article>
+        <article class="rounded border center">
+          <img class="small top-round responsive" src="../img/kreka.png">
+          <div>
+            <h4>Kreka</h4>
+            <p>Браузер для Android. (он сделан без кода...)</p>
+            <nav>
+              <button class="max" onclick="location.href = 'https://progwi0.pp.ua/kreka'">Поглядеть</button>
+            </nav>
+          </div>
+        </article>
+    </main>
+  </body>
 </html>
